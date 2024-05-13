@@ -42,6 +42,32 @@ body {
   margin: 0 2em;
 }
 
+.section-formulario {
+    background-color: aqua;
+}
+
+.section-formulario h1 {
+    margin: auto;
+    font-size: 2em;
+    margin: 1em;
+} 
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1em;
+    margin: auto;
+}
+
+.formulario-campos {
+    border: solid 2px #ff5151;
+    border-radius: 6px;
+    height: 30px;
+    width: 80%;
+    margin: auto;
+}
+
 .container {
   height: 100vh;
   display: grid;
@@ -51,9 +77,10 @@ body {
 .principal {
   background-image: url('imagens/background.png');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size:100%;
   align-items: center;
   text-align: center;
+  overflow: auto;
 }
 
 .container__caixa {
@@ -81,7 +108,7 @@ body {
   margin-bottom: 1em;
 }
 
-.botao__segundario {
+.botao__secundario {
   background-color: transparent;
   border: 2px solid var(--branco-principal);
 }
