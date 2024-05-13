@@ -8,6 +8,28 @@
     
 }
 
+.main {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.nav_list {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    margin: 0 2em;
+}
+
 body{
 
     background-color: var(--cor-de-fundo);
@@ -18,8 +40,6 @@ body{
     margin: 0;
     padding: 0;
 }
-
-
 
 .container {
     height: 100vh;
