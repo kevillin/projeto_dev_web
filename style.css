@@ -122,14 +122,10 @@ form legend {
   }
 }
 
-
-.container {
+.principal {
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
-}
-
-.principal {
   background-image: url('imagens/background.png');
   background-repeat: no-repeat;
   background-size:100%;
@@ -138,8 +134,10 @@ form legend {
   overflow: auto;
 }
 
-.container__caixa {
-  margin: 0 6em;
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .container__titulo {
@@ -253,4 +251,79 @@ form legend {
   font-family: var(--fonte-principal);
   margin: 2em 5em;
   color: #ff5151;
+}
+
+@media (max-width: 500px) {
+  .main_logo img {
+    width: 200px;
+  }
+  .nav_list a {
+    font-size: 10px;
+  }
+
+  .section-principal {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('imagens/main_img.jpg');
+    background-repeat: no-repeat;
+    background-size:100%;
+    align-items: left;
+    text-align: center;
+    overflow: auto;
+  }
+
+  .principal {
+    background-image: none;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size:100%;
+    align-items: left;
+    text-align: center;
+    overflow: auto;
+    margin: 20px 10px 0 10px;
+  }
+
+  #principal-imagens img{
+    margin: 0;
+  }
+
+  #principal-imagens {
+    display: flex;
+    margin: 7px;
+  }
+
+  .container__imagem2 {
+    max-height: 50px;
+    max-width: 140px;
+  }
+
+  .principal img {
+    width: 200px;
+  }
+
+  .principal h1 {
+    font-size: 20px;
+  }
+  
+  .container__botao {
+    width: 70%;
+    padding: 14px;
+    margin: 5px;
+  }
+
+  .container__caixa {
+    font-size: 20px;
+  }
+
+  .container__caixa h1 {
+    font-size: 20px;
+  }
+
+  .section-formulario {
+    border-radius: 0px;
+    margin: 0 auto;
+  }
 }
