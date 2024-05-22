@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: var(--cor-de-fundo);
+  background: linear-gradient(275deg, #0d0d0d, #ababab);
   color: var(--branco-principal);
 }
 
@@ -108,6 +108,13 @@ form legend {
   margin-top: 1em;
 }
 
+.principal_botoes {
+  display: flex;
+  gap: 1em;
+  
+  align-items: center;
+}
+
 .formulario-botao:hover {
   background-color: darkred;
 }
@@ -126,7 +133,7 @@ form legend {
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
-  background-image: url('imagens/background.png');
+  background-image: url('imagens/fundo.jpeg');
   background-repeat: no-repeat;
   background-size:100%;
   align-items: center;
@@ -167,7 +174,7 @@ form legend {
 }
 
 .secundario__imagem {
-  width: 80%;
+  width: 40%;
 }
 
 .secundario {
@@ -187,7 +194,8 @@ form legend {
 
 .descricao__texto {
   color: var(--cinza-segundario);
-  text-align: justify;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .secundario__botao {
@@ -199,38 +207,41 @@ form legend {
   padding: 0.5em;
 }
 
-.imagem2 {
-  margin: 0 10em;
-}
-
 .dispositivos {
+  background: linear-gradient(180deg, #0d0d0d, #e8e8e8);
   color: black;
   text-align: center;
+  padding: 2em;;
+}
+
+.dispositivo {
+  width: 400px;
 }
 
 .dispositivos__titulo {
   font-size: 50px;
+  color: #ffffff;
 }
 
 .dispositivos__lista {
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin: 5em 0;
 }
 
 .lista__item {
   font-size: 32px;
-  color: var(--botao-vermelho);
+  color: black;
 }
 
 .rodape {
+  background-color: black;
   text-align: center;
 }
 
-.rodade__logo {
-  width: 15%;
-  margin: 5em 0;
+.rodape__logo {
+  width: 25%;
+  margin: 3em 0;
 }
 
 .rodape__lista {
@@ -243,20 +254,82 @@ form legend {
 
 .lista__link a {
   text-decoration: none;
-  font-size: 20px;
+  color: inherit;
+  font-size: 25px;
 }
 
 .rodape__texto {
   font-size: 1em;
   font-family: var(--fonte-principal);
-  margin: 2em 5em;
-  color: #ff5151;
+  margin: 2em 5em 2em 0em;
+  color: #ffffff;
 }
+
+.container__secundario {
+  background-image: url('imagens/disney.jpeg');
+  background-color: rgba(10,23,55,1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  font-family: var(--fonte-principal);
+}
+
+.container__secundario::after {
+  content: '';
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: .5;
+  z-index: -1;
+}
+
+.container__descricao {
+  padding: 4em;
+  font-size: 35px;
+}
+
+.descricao__titulo {
+  font-size: 4em;
+  padding-bottom: 50px;
+}
+
 
 @media (max-width: 500px) {
   .main_logo img {
     width: 200px;
   }
+
+  .container__descricao {
+    padding: 2em;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .descricao__titulo {
+    font-size: 3em;
+  }
+
+  .container__secundario {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: var(--fonte-principal);
+  }
+
   .nav_list a {
     font-size: 10px;
   }
@@ -326,4 +399,70 @@ form legend {
     border-radius: 0px;
     margin: 0 auto;
   }
+
+  .lista__link a {
+    font-size: 20px;
 }
+
+.rodape {
+  background-color: black;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.rodape__logo {
+  width: 75%;
+  margin: 20px auto;
+}
+
+.rodape__lista {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.lista__link a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1em;
+}
+
+.rodape__texto {
+  align-items: center;
+  font-size: 1em;
+  margin: 0 10px;
+  font-family: var(--fonte-principal);
+  color: #ffffff;
+}
+
+.dispositivos__titulo {
+  font-size: 30px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dispositivo {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.dispositivos__lista {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+}
+
