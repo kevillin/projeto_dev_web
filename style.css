@@ -321,6 +321,10 @@ form legend {
   padding-bottom: 50px;
 }
 
+#menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .section-formulario {
     padding: 1em;
@@ -522,6 +526,112 @@ form legend {
   margin-top: 60px;
   height: auto;
   width: auto;
+}
+
+#menu {
+  z-index: 3;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0; /* Alterado para posicionar no lado direito */
+}
+
+#menu-bar {
+  width: 45px;
+  height: 40px;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.nav-a {
+  transition: 0.3s ease;
+  display: none;
+  background-color: #0d0d0d;
+  position: absolute;
+  top: 0;
+  right: 50px; /* Ajuste para aparecer ao lado do ícone do menu */
+}
+
+.nav-a ul {
+  padding: 0 22px;
+  background-color: #0d0d0d;
+  margin: 0;
+}
+
+.nav-a li {
+  list-style: none;
+  padding: 12px 0;
+  background-color: #0d0d0d;
+}
+
+.nav-a li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-a li a:hover {
+  font-weight: bold;
+}
+
+.menu-bg, #menu {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 20px 20px 0; /* Ajuste para posicionar no lado direito */
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+  width: 250px;
+  margin-top: 90%;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+.change-bg {
+  width: 50px;
+  height: 40px;
+  transform: translate(60%, -30%); /* Ajuste a transformação para o lado direito */
 }
 
 }
