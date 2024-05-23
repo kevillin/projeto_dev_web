@@ -110,48 +110,58 @@ form legend {
 
 .principal_botoes {
   display: flex;
-  gap: 1em;
-  
+  gap: 8em;
   align-items: center;
+  padding-bottom: 2em;
 }
 
 .formulario-botao:hover {
   background-color: darkred;
 }
 
-@media (max-width: 768px) {
-  .section-formulario {
-    padding: 1em;
-  }
+.section-principal {
+  background-image: url('imagens/fundo.jpeg');
+  background-color: rgba(10,23,55,1);
+  background-repeat: no-repeat;
+  background-size:100%;
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fonte-principal);
+  text-align: center;
+  overflow: auto;
+}
 
-  form fieldset {
-    padding: 1em;
-  }
+.section-principal::after {
+  content: '';
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+  z-index: -1;
 }
 
 .principal {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  background-image: url('imagens/fundo.jpeg');
-  background-repeat: no-repeat;
-  background-size:100%;
-  align-items: center;
+  padding-top: 9em;
+}
+
+.container__titulo {
+  font-family: var(--fonte-principal);
+  font-size: 3.5em;
+  font-weight: 700;
   text-align: center;
-  overflow: auto;
 }
 
 .container {
   height: 100vh;
   display: grid;
   grid-template-columns: 50% 50%;
-}
-
-.container__titulo {
-  font-family: var(--fonte-principal);
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
 }
 
 .container__imagem {
@@ -161,16 +171,17 @@ form legend {
 .container__botao {
   background-color: var(--botao-vermelho);
   border-radius: 5px;
-  padding: 1em;
+  padding: 2em;
   color: var(--branco-principal);
   display: block;
   text-decoration: none;
   margin-bottom: 1em;
+  font-size: 2em;
 }
 
 .botao__secundario {
-  background-color: transparent;
-  border: 2px solid var(--branco-principal);
+  background-color: rgba(170, 192, 170, 70%);
+  border: 2px var(--branco-principal);
 }
 
 .secundario__imagem {
@@ -198,13 +209,18 @@ form legend {
   margin-bottom: 1em;
 }
 
-.secundario__botao {
-  display: inline-block;
-  margin: 1em 0;
-}
-
 .container__descricao {
   padding: 0.5em;
+}
+
+.container__descricao a {
+  font-size: 1.5em;
+  width: 50%;
+  height: 40%;
+  padding: 50px;
+  margin-top: 150px;
+  background-color: var(--botao-vermelho);
+  text-align: center;
 }
 
 .dispositivos {
@@ -305,10 +321,24 @@ form legend {
   padding-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .section-formulario {
+    padding: 1em;
+  }
+
+  form fieldset {
+    padding: 1em;
+  }
+}
+
 
 @media (max-width: 500px) {
   .main_logo img {
     width: 200px;
+  }
+
+  .nav_list {
+    display: none;
   }
 
   .container__descricao {
@@ -335,11 +365,26 @@ form legend {
   }
 
   .section-principal {
-    height: 92vh;
+    background-image: url('imagens/fundo.jpeg');
+    background-color: rgba(10,23,55,1);
+    height: 95vh;
+    color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fonte-principal);
+    text-align: center;
+    overflow: auto;
+  }
+
+  .section-principal {
+    height: 80vhvh;
     display: flex;
     flex-direction: column;
     background-image: url('imagens/main_img.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     background-size:100%;
     align-items: left;
     text-align: center;
@@ -347,8 +392,8 @@ form legend {
   }
 
   .principal {
+    padding: 0;
     background-image: none;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -356,28 +401,29 @@ form legend {
     align-items: left;
     text-align: center;
     overflow: auto;
-    margin: 20px 10px 0 10px;
+    margin: 0;
+  }
+  
+  .container__titulo {
+    font-family: var(--fonte-principal);
+    font-size: 3.5em;
+    font-weight: 700;
+    text-align: center;
   }
 
   #principal-imagens img{
     margin: 0;
+    width: 100%;
   }
 
   #principal-imagens {
     display: flex;
     margin: 7px;
-  }
-
-  .container__imagem2 {
-    max-height: 50px;
-    max-width: 140px;
-  }
-
-  .principal img {
-    width: 200px;
+    width: 50%;
   }
 
   .principal h1 {
+    padding-top: 20px;
     font-size: 20px;
   }
   
@@ -385,6 +431,13 @@ form legend {
     width: 70%;
     padding: 14px;
     margin: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .principal_botoes {
+    gap: 1em;
   }
 
   .container__caixa {
@@ -462,6 +515,13 @@ form legend {
   justify-content: center;
   flex-direction: column;
   margin-top: 30px;
+}
+
+.container__descricao a {
+  padding: 20px;
+  margin-top: 60px;
+  height: auto;
+  width: auto;
 }
 
 }
