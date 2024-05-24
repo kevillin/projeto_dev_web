@@ -46,18 +46,18 @@ body {
   background-color: #f0f0f0;
   padding: 2em;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 400px;
   margin: 2em auto;
 }
 
 .section-formulario h2 {
   text-align: center;
   margin-bottom: 1em;
-  color: var(--botao-vermelho);
+  color: #336699;
 }
 
 form fieldset {
-  border: 2px solid var(--botao-vermelho);
+  border: 2px solid #336699;
   border-radius: 10px;
   padding: 2em;
 }
@@ -65,7 +65,7 @@ form fieldset {
 form legend {
   font-size: 1.5em;
   font-weight: bold;
-  color: var(--botao-vermelho);
+  color: #336699;
   padding: 0 10px;
 }
 
@@ -77,26 +77,26 @@ form legend {
   display: block;
   margin-bottom: 0.5em;
   font-weight: bold;
-  color: #333;
+  color: #555;
 }
 
 .formulario-campos {
   width: 100%;
   padding: 10px;
-  border: 2px solid var(--botao-vermelho);
+  border: 2px solid #336699;
   border-radius: 5px;
   font-size: 1em;
   box-sizing: border-box;
 }
 
 .formulario-campos:focus {
-  border-color: var(--branco-principal);
+  border-color: #333;
   outline: none;
-  box-shadow: 0 0 5px var(--botao-vermelho);
+  box-shadow: 0 0 5px #336699;
 }
 
 .formulario-botao {
-  background-color: var(--botao-vermelho);
+  background-color: #336699;
   color: var(--branco-principal);
   border: none;
   border-radius: 5px;
@@ -116,7 +116,7 @@ form legend {
 }
 
 .formulario-botao:hover {
-  background-color: darkred;
+  background-color: #004466;
 }
 
 .section-principal {
